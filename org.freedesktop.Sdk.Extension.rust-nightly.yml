@@ -18,21 +18,7 @@ modules:
     cleanup:
       - "/share/doc/rust/html"
     sources:
-      - type: archive
-        only-arches:
-          - arm
-        url: https://static.rust-lang.org/dist/2020-08-15/rust-nightly-arm-unknown-linux-gnueabihf.tar.gz
-        sha256: 6338867a41d95d716d0297ad091db893b00feb03adaa1c0993133236f91d685c
-      - type: archive
-        only-arches:
-          - aarch64
-        url: https://static.rust-lang.org/dist/2020-08-15/rust-nightly-aarch64-unknown-linux-gnu.tar.gz
-        sha256: a5ca0a558824fc75622289615616f67fcaf640edd7ce67f302ae9320a604431e
-      - type: archive
-        only-arches:
-          - x86_64
-        url: https://static.rust-lang.org/dist/2020-08-15/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
-        sha256: 24b4681187654778817652273a68a4d55f5090604cd14b1f1c3ff8785ad24b99
+      - rust-nightly-sources.json
     build-commands:
       - "./install.sh --prefix=/usr/lib/sdk/rust-nightly --disable-ldconfig --verbose"
   - name: scripts
